@@ -1,0 +1,144 @@
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akashic Records Access</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background and Effects Container -->
+    <div id="background-container"></div>
+    <div id="protection-shield" class="shield-animation"></div>
+    <div id="sacred-geometry-container" class="d-none">
+        <img src="sacred-geometry.png" alt="Sacred Geometry" class="sacred-geometry-animation">
+    </div>
+
+    <main class="container d-flex flex-column justify-content-center align-items-center text-center">
+
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="screen active">
+            <div class="content-box">
+                <h1 class="display-4 mystical-title">Access Your Akashic Records</h1>
+                <p class="lead mystical-text mb-4">An intuitive journey into the library of your soul.</p>
+                <button id="begin-journey-btn" class="btn btn-lg btn-outline-light mystical-btn">Begin the Journey</button>
+            </div>
+        </section>
+
+        <!-- Preparation Screen -->
+        <section id="preparation-screen" class="screen">
+            <div class="content-box">
+                <h2 class="mystical-title">Energy Preparation</h2>
+                <p class="mystical-text">Center your being. Breathe with the universe.</p>
+                <div id="breathing-guide">
+                    <div id="breathing-animation"></div>
+                    <p id="breathing-text" class="mystical-text mt-3">Inhale</p>
+                </div>
+                <p class="mt-4"><small>A 963Hz Solfeggio frequency is playing to attune your energy.</small></p>
+                <button id="start-connection-btn" class="btn btn-lg btn-outline-light mystical-btn mt-4">I am Ready</button>
+            </div>
+        </section>
+
+        <!-- Connection Form Screen -->
+        <section id="connection-form-screen" class="screen">
+            <div class="content-box">
+                <h2 class="mystical-title">Akashic Connection</h2>
+                <p class="mystical-text">Set your intention to open the sacred gates.</p>
+                <form id="akashic-form" class="mt-4 text-start">
+                    <div class="mb-3">
+                        <label for="spiritualName" class="form-label mystical-text">Spiritual Name (if known)</label>
+                        <input type="text" class="form-control" id="spiritualName" placeholder="Enter your spiritual name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="intention" class="form-label mystical-text">Clear Intention *</label>
+                        <input type="text" class="form-control" id="intention" placeholder="e.g., 'What is my life purpose?'" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="birthDate" class="form-label mystical-text">Date of Birth *</label>
+                        <input type="date" class="form-control" id="birthDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="emotion" class="form-label mystical-text">Predominant Emotion *</label>
+                        <input type="text" class="form-control" id="emotion" placeholder="e.g., 'Hopeful', 'Curious'" required>
+                    </div>
+                    <div class="text-center">
+                         <button type="submit" class="btn btn-lg btn-outline-light mystical-btn">Open the Records</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Accessing Screen -->
+        <section id="accessing-screen" class="screen">
+            <div class="content-box">
+                <h2 class="mystical-title">Entering the Akasha</h2>
+                <p class="mystical-text">The doors are opening. The light is guiding you.</p>
+                <div class="light-tunnel"></div>
+            </div>
+        </section>
+        
+        <!-- Session Screen -->
+        <section id="session-screen" class="screen">
+             <div class="content-box w-100" style="max-width: 800px;">
+                <h2 class="mystical-title">The Records are Open</h2>
+                <p class="mystical-text">Record the wisdom that flows to you.</p>
+                <div class="row mt-4">
+                    <div class="col-md-7">
+                        <h4 class="mystical-subtitle">Interactive Logbook</h4>
+                        <textarea id="logbook" class="form-control mt-3" rows="10" placeholder="Record visions, symbols, words, emotions, or sensations received..."></textarea>
+                    </div>
+                    <div class="col-md-5 mt-4 mt-md-0">
+                         <h4 class="mystical-subtitle">Symbolic Interpretation</h4>
+                         <div id="interpretation-guide" class="text-start p-3">
+                             <p><strong>Light:</strong> Illumination, truth, clarity.</p>
+                             <p><strong>Water:</strong> Emotions, intuition, flow.</p>
+                             <p><strong>Tree:</strong> Growth, ancestry, life path.</p>
+                             <p><strong>Key:</strong> Solutions, new opportunities.</p>
+                             <p><strong>Book/Scroll:</strong> Knowledge, contracts, destiny.</p>
+                             <p><strong>Stairs/Ladder:</strong> Ascension, progress.</p>
+                         </div>
+                    </div>
+                </div>
+                <button id="close-session-btn" class="btn btn-lg btn-outline-light mystical-btn mt-4">Close the Records</button>
+             </div>
+        </section>
+
+        <!-- Closing Screen -->
+        <section id="closing-screen" class="screen">
+             <div class="content-box">
+                <h2 class="mystical-title">Closing the Records</h2>
+                <p class="mystical-text">Returning with gratitude. Your energy is sealed in light.</p>
+            </div>
+        </section>
+
+        <!-- Mentoring Screen -->
+        <section id="mentoring-screen" class="screen">
+             <div class="content-box">
+                <h2 class="mystical-title">Spiritual Mentoring</h2>
+                <p class="mystical-text">Tips for integrating your experience.</p>
+                <div class="text-start mt-4 p-3" id="mentoring-tips">
+                    <p><strong>Ground Yourself:</strong> Drink water, walk in nature, or eat a nourishing meal to return fully to your body.</p>
+                    <p><strong>Reflect, Don't Obsess:</strong> Allow the messages to unfold naturally over the coming days. The deepest wisdom often reveals itself over time.</p>
+                    <p><strong>Take Inspired Action:</strong> If you received clear guidance, take one small, practical step in that direction.</p>
+                    <p><strong>Practice Gratitude:</strong> Thank your guides, your higher self, and the keepers of the records for the wisdom shared.</p>
+                </div>
+                <button id="restart-btn" class="btn btn-lg btn-outline-light mystical-btn mt-4">Begin Anew</button>
+            </div>
+        </section>
+        
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
